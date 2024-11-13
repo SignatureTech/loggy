@@ -1,0 +1,7 @@
+jdk:
+  - openjdk17
+before_install:
+  - ./scripts/prepareJitpackEnvironment.sh
+install:
+  - FILE="-Dfile=loggy-release.aar"
+  - mvn install:install-file $FILE -DgroupId=com.github.sonusony19 -DartifactId=Loggy -Dversion=0.0.1 -Dpackaging=aar -DgeneratePom=true
